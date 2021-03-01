@@ -14,7 +14,7 @@ public class SpringFoxConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select()
+                .select() // returns an ApiSelectorBuilder, which provides a way to control the endpoints exposed by Swagger
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
